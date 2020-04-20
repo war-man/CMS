@@ -26,8 +26,9 @@ namespace CMS.Core.Web
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            string connectionString = "Server=DESKTOP-M2I4E8P;Database=ContactsDB;Trusted_Connection=True;";
-            services.AddDbContext<CMSContext>(options => options.UseSqlServer(connectionString)); 
+            //string connectionString = "Server=DESKTOP-M2I4E8P;Database=ContactsDB;Trusted_Connection=True;";
+            //services.AddDbContext<CMSContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"))); // Registered the database context
+            services.AddDbContext<CMSContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             services.AddControllers();
         }
 

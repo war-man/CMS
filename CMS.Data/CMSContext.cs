@@ -30,6 +30,7 @@ namespace CMS.Data
         public virtual DbSet<TeamMember> TeamMembers { get; set; }
         public virtual DbSet<User> Users { get; set; }
         public virtual DbSet<UserRight> UserRights { get; set; }
+        public virtual DbSet<Error> Errors { get; set; }
 
     }
 }
